@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <style>
+    dl {
+      display: grid;
+      grid-template: auto / 10em 1fr;
+    }
+
+    dt {
+      grid-column: 1;
+    }
+
+    dd {
+      grid-column: 2;
+    }
+
+    dt,
+    dd {
+      margin: 0;
+      padding: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <h3>General options</h3>
+    <dl>
+      <dt>Collection ID<span style="color: red;">*<span></dt>
+      <dd><input type="text" id="colectionId" /></dd>
+    </dl>
+    <hr>
+    <h3>Additional options</h3>
+    <dl>
+      <dt>Authorization Header<span style="color: red;">*</span></dt>
+      <dd><input type="text" id="authorization" size="50" /></dd>
+      <dt>auth_token</dt>
+      <dd><input type="text" id="authToken" size="50" /></dd>
+      <dt>ct0</dt>
+      <dd><input type="text" id="ct0" size="50" /></dd>
+      <dt>Debug mode</dt>
+      <dd><input type="checkbox" id="debug" name="debug" /></dd>
+    </dl>
+    <button type="submit">Save</button>
+  </form>
+
+  <script src="options.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+.collection-button {
+  width: 1.25em;
+}
+
+.collection-button path {
+  stroke: rgb(105, 110, 114);
+}

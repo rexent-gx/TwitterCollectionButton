@@ -1,0 +1,44 @@
+{
+  "manifest_version": 2,
+  "name": "Twitter Collection Button",
+  "version": "1.0.0",
+  "description": "Adds a UI that controls Collections on web client.",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "permissions": [
+    "tabs",
+    "cookies",
+    "storage",
+    "https://*.twitter.com/*",
+    "https://*.x.com/*"
+  ],
+  "options_ui": {
+    "page": "options.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.twitter.com/*",
+        "https://*.x.com/*"
+      ],
+      "js": [
+        "main.js"
+      ],
+      "css": [
+        "main.css"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "applications": {
+    "gecko": {
+      "id": "twittercollectionbutton@rexlab.dev"
+    }
+  }
+}
